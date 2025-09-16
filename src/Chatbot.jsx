@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-import dotenv from dotenv
+import dotenv from "dotenv"
 
 dotenv.config()
 
