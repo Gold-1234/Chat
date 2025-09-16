@@ -1,8 +1,5 @@
 import React, { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-import dotenv from "dotenv"
-
-dotenv.config()
 
 export default function Chatbot() {
   const [messages, setMessages] = useState([]);
@@ -34,7 +31,7 @@ export default function Chatbot() {
       // 3. THE ORIGINAL API CALL LOGIC now runs in the 'planning' phase.
       setIsLoading(true);
       try {
-        const res = await axios.post(process.env.BACKEND_URL, {
+        const res = await axios.post(import.meta.env.VITE_BACKEND_URL, {
           // You can optionally send the userName to the backend for even more personalization
           // userName: userName, 
           messages: newMessages,
